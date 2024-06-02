@@ -23,13 +23,13 @@ const indexRoute = createRoute({
   component: () => <HomeSC></HomeSC>,
 });
 
-const aboutRoute = createRoute({
+const exampleRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/example",
   component: () => <ExampleSC></ExampleSC>,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+const routeTree = rootRoute.addChildren([indexRoute, exampleRoute]);
 
 export const router = createRouter({ routeTree });
 
